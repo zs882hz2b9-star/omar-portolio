@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>Omar Mohamed | Portfolio</title>
+<style>
+:root{--bg:#0b1120;--panel:#121c30;--panel2:#17243a;--text:#edf3ff;--muted:#a8b5cb;--accent:#70e1c1;--accent2:#80aaff;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 85% 5%,#1a3150 0,transparent 30%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1080px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(11,17,32,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.3px}.brand span{color:var(--accent)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.94rem}.navlinks a:hover{color:var(--accent)}
+.hero{padding:94px 0 76px;display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:44px;min-height:530px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2.7rem,6vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--accent)}.hero p{max-width:590px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:750;border:1px solid var(--line);cursor:pointer;font-size:.95rem}.primary{background:var(--accent);color:#08201b;border-color:transparent}.secondary{background:rgba(255,255,255,.04)}.btn:hover{transform:translateY(-1px)}.profile-card{padding:28px;border-radius:24px;background:linear-gradient(145deg,rgba(112,225,193,.13),rgba(128,170,255,.08));border:1px solid var(--line);box-shadow:0 22px 70px rgba(0,0,0,.18)}.avatar{width:88px;height:88px;display:grid;place-items:center;border-radius:24px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b1727;font-size:2rem;font-weight:900;margin-bottom:20px}.profile-card h3{font-size:1.4rem;margin:0 0 4px}.profile-card p{font-size:.95rem;margin:0;color:var(--muted)}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.chip{font-size:.78rem;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#dce7f8}
+section{padding:65px 0}.section-head{margin-bottom:26px}.section-head .eyebrow{font-size:.72rem}.section-head h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:6px 0}.section-head p{color:var(--muted);margin:0;max-width:650px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border-radius:18px;border:1px solid var(--line);background:rgba(18,28,48,.78)}.card .icon{font-size:1.5rem;margin-bottom:12px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0;font-size:.95rem}.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:10px 14px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);color:#e4edfc}
+.assignments{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;align-items:start}.upload-box{padding:24px;border:1px dashed rgba(112,225,193,.55);border-radius:18px;background:rgba(112,225,193,.045)}.upload-box h3{margin:0 0 8px}.upload-box p,.hint{color:var(--muted);font-size:.9rem}.file-input{display:block;width:100%;margin:18px 0;color:var(--muted);font-size:.9rem}.text-input{width:100%;padding:12px 13px;border-radius:10px;border:1px solid var(--line);background:#0b1425;color:var(--text);font:inherit;margin-top:6px}.label{font-size:.88rem;color:#dce7f8;font-weight:650}.upload-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.assignment-list{display:grid;gap:12px}.assignment{display:flex;align-items:center;gap:14px;padding:15px;border:1px solid var(--line);background:var(--panel);border-radius:14px;min-width:0}.file-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:var(--panel2);font-size:1.3rem;flex-shrink:0}.file-meta{min-width:0;flex:1}.file-meta strong{display:block;overflow-wrap:anywhere}.file-meta small{color:var(--muted)}.file-link{color:var(--accent);font-weight:700;font-size:.88rem}.remove{background:transparent;color:#ffb4b4;border:0;cursor:pointer;font-size:1rem;padding:6px}.empty{padding:26px;border:1px solid var(--line);border-radius:16px;color:var(--muted);text-align:center}
+.contact-panel{padding:30px;border-radius:22px;background:linear-gradient(110deg,rgba(112,225,193,.1),rgba(128,170,255,.1));border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:22px}.contact-panel h2{margin:0 0 6px}.contact-panel p{margin:0;color:var(--muted)}footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.navlinks{gap:12px;font-size:.82rem}.hero{grid-template-columns:1fr;padding:68px 0 48px;gap:26px}.profile-card{max-width:460px}.grid{grid-template-columns:1fr}.assignments{grid-template-columns:1fr}.contact-panel{align-items:flex-start;flex-direction:column}.hero h1{letter-spacing:-1px}}
+@media(max-width:440px){nav{height:auto;min-height:68px;align-items:flex-start;padding:16px 0;flex-direction:column}.navlinks{flex-wrap:wrap}.hero{padding-top:48px}}
+</style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="brand" href="#home">OM<span>.</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#assignments">Assignments</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Welcome to my portfolio</div>
+      <h1>Hi, I'm <em>Omar Mohamed</em>.</h1>
+      <p>I'm a student who enjoys learning new technologies, building my skills, and turning what I learn into practical work. This website is where I share my learning journey and academic assignments.</p>
+      <div class="actions"><a class="btn primary" href="#assignments">View Assignments ↗</a><a class="btn secondary" href="#about">More About Me</a></div>
+    </div>
+    <aside class="profile-card">
+      <div class="avatar">OM</div>
+      <h3>Omar Mohamed Mohamed Abas</h3>
+      <p>Student · Aspiring Technology Professional</p>
+      <div class="chips"><span class="chip">Always Learning</span><span class="chip">Problem Solving</span><span class="chip">Teamwork</span></div>
+    </aside>
+  </div>
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">A little about me</div><h2>About Me</h2><p>I'm at the beginning of my professional journey and focused on developing a strong foundation. I use this portfolio to organize my coursework, document my progress, and showcase projects as I create them.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">🎯</div><h3>My Goal</h3><p>Keep learning, improve my practical skills, and build projects that solve real problems.</p></article>
+      <article class="card"><div class="icon">📚</div><h3>My Learning</h3><p>Explore course topics, practice regularly, and apply new knowledge through assignments.</p></article>
+      <article class="card"><div class="icon">🚀</div><h3>My Journey</h3><p>Start with the basics, learn from feedback, and grow this portfolio over time.</p></article>
+    </div>
+  </div></section>
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">What I'm building</div><h2>Skills & Interests</h2><p>These are starter skills and learning areas. Update them to match what you have actually studied.</p></div>
+    <div class="skills"><span class="skill">HTML & CSS Basics</span><span class="skill">Programming Fundamentals</span><span class="skill">Problem Solving</span><span class="skill">Computer Skills</span><span class="skill">Learning New Tools</span><span class="skill">Teamwork</span></div>
+  </div></section>
+  <section id="assignments"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">My coursework</div><h2>Assignments</h2><p>Add your assignments here so they are organized in one place. You can include PDFs, documents, images, or other coursework files.</p></div>
+    <div class="card" style="margin-bottom:18px">
+      <div class="eyebrow">Web Development · Assignment 01</div>
+      <h3 style="margin:8px 0">GET vs. POST in HTTP</h3>
+      <p style="color:var(--muted);margin:0 0 16px">A quick guide to two common HTTP methods used to send requests from a client to a server.</p>
+      <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px">
+        <article class="card" style="background:rgba(112,225,193,.06)">
+          <h3><span style="color:var(--accent)">GET</span> Method</h3>
+          <p>GET requests data from a server. Parameters are commonly included in the URL, so they may appear in browser history and server logs. GET is intended for retrieving data and should not change server state.</p>
+          <p style="margin-top:10px"><strong>Example:</strong> <code>/products?category=books</code></p>
+        </article>
+        <article class="card" style="background:rgba(128,170,255,.06)">
+          <h3><span style="color:var(--accent2)">POST</span> Method</h3>
+          <p>POST sends data to a server for processing, such as submitting a form or creating a resource. The submitted data is usually placed in the request body rather than the URL. POST is not automatically secure; HTTPS is still important.</p>
+          <p style="margin-top:10px"><strong>Example:</strong> Submitting a registration form.</p>
+        </article>
+      </div>
+      <h3 style="margin:0 0 10px">Key Differences</h3>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:.92rem">
+          <thead><tr><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">Feature</th><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">GET</th><th style="text-align:left;padding:10px;border-bottom:1px solid var(--line)">POST</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Main purpose</td><td style="padding:10px;border-bottom:1px solid var(--line)">Retrieve data</td><td style="padding:10px;border-bottom:1px solid var(--line)">Submit data for processing</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Data location</td><td style="padding:10px;border-bottom:1px solid var(--line)">Usually URL query parameters</td><td style="padding:10px;border-bottom:1px solid var(--line)">Usually request body</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Browser history</td><td style="padding:10px;border-bottom:1px solid var(--line)">URL parameters may be visible</td><td style="padding:10px;border-bottom:1px solid var(--line)">Body data is not shown in the URL</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Typical use</td><td style="padding:10px;border-bottom:1px solid var(--line)">Search and view pages</td><td style="padding:10px;border-bottom:1px solid var(--line)">Forms and creating records</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color:var(--muted);margin:14px 0 0"><strong>Conclusion:</strong> Use GET when you need to retrieve information, and POST when you need to submit information for processing. POST does not encrypt data by itself; use HTTPS for secure communication.</p>
+    </div>
+    <div class="assignments">
+      <div class="upload-box">
+        <h3>＋ Add an Assignment</h3><p>Select a file from your device and give it a title. It will appear in the list on this page.</p>
+        <label class="label" for="assignmentTitle">Assignment title</label><input class="text-input" id="assignmentTitle" placeholder="e.g. HTML Assignment 1">
+        <label class="label" for="assignmentFile" style="display:block;margin-top:14px">Choose file</label><input class="file-input" type="file" id="assignmentFile">
+        <div class="upload-actions"><button class="btn primary" id="addAssignment" type="button">Add to Portfolio</button></div>
+        <p class="hint">Note: files added here are stored in this browser on this device. To let your instructor access them online, upload the website and assignment files to a hosting service, or add links to files stored online.</p>
+      </div>
+      <div id="assignmentList" class="assignment-list"><div class="empty">No assignments added yet. Your files will appear here.</div></div>
+    </div>
+  </div></section>
+  <section id="contact"><div class="wrap"><div class="contact-panel"><div><h2>Let's Connect</h2><p>Have a question or want to collaborate on a project? Feel free to get in touch.</p></div><a class="btn primary" href="mailto:your.email@example.com">Email Me ↗</a></div><p class="hint">Replace <strong>your.email@example.com</strong> with your real email address before publishing.</p></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Omar Mohamed Mohamed Abas</span><span>Built with curiosity and a willingness to learn.</span></div></footer>
+<script>
+const DB_NAME = 'omar-portfolio-assignments';
+const STORE = 'files';
+let db;
+function openDB(){
+ return new Promise((resolve,reject)=>{
+  const req=indexedDB.open(DB_NAME,1);
+  req.onupgradeneeded=()=>req.result.createObjectStore(STORE,{keyPath:'id',autoIncrement:true});
+  req.onsuccess=()=>{db=req.result;resolve(db)};
+  req.onerror=()=>reject(req.error);
+ });
+}
+function allItems(){return new Promise((resolve,reject)=>{const r=db.transaction(STORE).objectStore(STORE).getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+function addItem(item){return new Promise((resolve,reject)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).add(item);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+function deleteItem(id){return new Promise((resolve,reject)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).delete(id);r.onsuccess=resolve;r.onerror=()=>reject(r.error)})}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function renderItems(){
+ const items=await allItems(); const list=document.getElementById('assignmentList');
+ if(!items.length){list.innerHTML='<div class="empty">No assignments added yet. Your files will appear here.</div>';return}
+ list.innerHTML='';
+ items.sort((a,b)=>b.id-a.id).forEach(item=>{
+  const url=URL.createObjectURL(item.file);
+  const row=document.createElement('div');row.className='assignment';
+  row.innerHTML=`<div class="file-icon">📄</div><div class="file-meta"><strong>${escapeHTML(item.title)}</strong><small>${escapeHTML(item.file.name)} · ${(item.file.size/1024).toFixed(1)} KB</small><br><a class="file-link" href="${url}" download="${escapeHTML(item.file.name)}">Open / Download ↗</a></div><button class="remove" title="Remove assignment" aria-label="Remove assignment">✕</button>`;
+  row.querySelector('.remove').addEventListener('click',async()=>{await deleteItem(item.id);renderItems()});
+  list.appendChild(row);
+ });
+}
+document.getElementById('addAssignment').addEventListener('click',async()=>{
+ const title=document.getElementById('assignmentTitle').value.trim();
+ const input=document.getElementById('assignmentFile');
+ if(!input.files.length){alert('Please choose an assignment file first.');return}
+ const file=input.files[0];
+ try{await addItem({title:title||file.name,file});document.getElementById('assignmentTitle').value='';input.value='';await renderItems()}
+ catch(e){alert('Could not save this file in your browser. Try a smaller file or another browser.')}
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+openDB().then(renderItems).catch(()=>{document.getElementById('assignmentList').innerHTML='<div class="empty">Assignment storage is not available in this browser. You can still use the portfolio sections.</div>'});
+</script>
+</body>
+</html>
